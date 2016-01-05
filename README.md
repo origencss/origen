@@ -1,2 +1,3 @@
 # origen
-Responsive CSS Framework
+Origen CSS is a responsive CSS Framework that I'm developing with the purpose of learning and enjoy on the process. 
+

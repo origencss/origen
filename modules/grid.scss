@@ -1,0 +1,64 @@
+[class*='col-'] {
+	/*-- gutter -- */
+	padding-left: 12px;
+	padding-right: 12px;
+
+	//background-color: #FFDCDC;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.row {
+	/*-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;*/
+	box-sizing: border-box;
+	/*display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;*/
+	display: box;
+	display: flex;
+	/*-webkit-box-lines: multiple;
+	-moz-box-lines: multiple;
+	-o-box-lines: multiple;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;*/
+	flex-wrap: wrap;
+	margin-left: -12px;
+	margin-right: -12px;
+
+}
+
+.row {
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+}
+
+
+/* mobile first */
+@for $i from 1 through 12 {
+  .col-xs-#{$i} { 
+  	width: 100% / (12 / $i); 
+  }
+}
+
+/* medias querys */
+@each $tam,$long in (768px: sm, 991px: md, 1200px: lg) {
+	@media (min-width: #{$tam}) {
+		@for $i from 1 through 12 {
+		  .col-#{$long}-#{$i} { 
+		  	width: 100% / (12 / $i); 
+		  }
+		}
+	}
+}
+
+
+
+.outline, .outline *{
+	outline: 1px solid #F6A1A1; 
+}
+
+
