@@ -21,7 +21,7 @@ The official website of the project makes the roll of documentation [http://orig
 
 ## Creator
 
-** Miguel Negrón ** 
+**Miguel Negrón** 
 * <https://github.com/migueladn>
 
 ## Copyright
