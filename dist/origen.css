@@ -1,3 +1,4 @@
+/* Origen by Migueladn version (0.1.1-alpha) */
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -368,6 +369,7 @@ td,
 th {
   padding: 0; }
 
+/* Flexbox grid system*/
 [class*='col-'] {
   /*-- gutter -- */
   padding-left: 12px;
@@ -381,6 +383,7 @@ th {
   display: box;
   display: flex;
   flex-wrap: wrap;
+  max-width: 100%;
   margin-left: -6px;
   margin-right: -6px; }
 
