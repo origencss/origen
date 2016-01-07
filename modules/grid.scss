@@ -1,8 +1,22 @@
 /* Flexbox grid system*/
+.container {
+	padding-right: 12px;
+    padding-left: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 [class*='col-'] {
 	/*-- gutter -- */
 	padding-left: 12px;
 	padding-right: 12px;
+	min-height: 1px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -13,9 +27,8 @@
 	display: box;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 100%;
-	margin-left: -6px;
-	margin-right: -6px;
+	margin-left: -12px;
+	margin-right: -12px;
 }
 
 .row {
@@ -31,6 +44,15 @@
   }
 }
 
+@each $long in (sm, md, lg) {
+	@for $i from 1 through 12 {
+	  .col-#{$long}-#{$i} { 
+	  	width: 100%; 
+	  }
+	}
+}
+
+
 /* medias querys */
 @each $tam,$long in (768px: sm, 991px: md, 1200px: lg) {
 	@media (min-width: #{$tam}) {
@@ -40,10 +62,6 @@
 		  }
 		}
 	}
-}
-
-.outline, .outline *{
-	outline: 1px solid #F6A1A1; 
 }
 
 
