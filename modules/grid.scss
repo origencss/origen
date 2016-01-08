@@ -20,6 +20,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	width: 100%;
 }
 
 .row {
@@ -44,13 +45,7 @@
   }
 }
 
-@each $long in (sm, md, lg) {
-	@for $i from 1 through 12 {
-	  .col-#{$long}-#{$i} { 
-	  	width: 100%; 
-	  }
-	}
-}
+
 
 
 /* medias querys */
