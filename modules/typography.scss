@@ -1,12 +1,15 @@
 /* Typography */
 
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
 html {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  // font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
   background: #fff;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #212121;
   line-height: 1.6;
-
 }
 
 /* Headings */
@@ -23,13 +26,22 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 500;
   line-height: 1.1;
   margin-bottom: 24px;
+  a {
+    color: #212121;
+    text-decoration: none;
+  }
+}
+/* Links */
+a {
+    color: #2962ff;
+    text-decoration: none;
 }
 
 /* Paragraphs */
-
 p {
   margin-bottom: 24px;
 }
+
 
 /* Divider */ 
 
@@ -37,7 +49,7 @@ hr {
     max-width: 75rem;
     height: 0;
     border: 0;
-    border-bottom: 1px solid #cacaca;
+    border-top: 1px solid rgba(0,0,0,.08);
     margin: 1.25rem auto;
     clear: both;
 }
@@ -45,19 +57,40 @@ hr {
 /* Blockquotes */
 
 blockquote {
-  display: block;
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  // display: block;
+  // padding: 10px 20px;
+  // margin: 0 0 20px;
+  // background: #f9f9f9;
+  // border-left: 6px solid #ccc; 
+  margin: 0;
   font-size: 17.5px;
-  background: #f9f9f9;
-  border-left: 6px solid #ccc;
+
+  font-family: "Roboto Mono", Roboto, sans-serif;
+  font-weight: 400;
+  quotes: "“" "”" "‘" "’";
+
+  p::before {
+    content: open-quote;
+  }
+  p::after {
+    content: close-quote;
+  }
+
+  p {
+    margin: 0 !important;
+  }
+  p:last-child:after {content: '”'; content: close-quote;}
+  cite::before {
+    content: "— ";
+  }
+
 }
 
 cite {
   display: block;
   font-weight: bold;
-  :before {
-    content: '\2014 \0020';
+  ::before {
+    content: "— ";
   }
 }
 
@@ -66,26 +99,31 @@ code, samp, kbd {
   font-family: "Courier New", Courier, monospace, sans-serif;
   text-align: left;
   color: #555;
+  background-color: #f7f7f9;
 }
 
 pre {
   tab-size: 2;
   padding: 10px 20px;
   border-left: 6px solid #ccc;
-  background: #f9f9f9;
+  background-color: #f7f7f9;
   overflow: auto;
   white-space: pre-wrap;
+  border: 1px solid #e1e1e8;
+  border-radius: 4px;
 
   code {
     text-align: inline;
     line-height: 1.6em;
     font-size: 16px;
   }
+
 }
 
 /* Highlight text */
 mark {
-  background-color: #fcf8e3;
+  background-color: transparent !important;
+  background-image: linear-gradient(to bottom, rgba(125,255,179,1),rgba(125,255,179,1));
 }
 
 
