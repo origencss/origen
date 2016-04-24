@@ -9,7 +9,7 @@ Origen is a responsive front-end framework ( [http://origencss.github.io](http:/
 * [Copyright](#copyright)
 
 ## Quick start
-* Download latest release that contains CSS, JavaScript and Fonts files to use in your proyect. Copy the css, js and fonts directories in your site and link the origen.css as a stylesheet in the head of your html and origen.js file in the body. Also [jQuery](https://jquery.com/) is needed before the origen.js file. 
+Download latest release that contains CSS, JavaScript and Fonts files to use in your proyect. Copy the css, js and fonts directories in your site and link the origen.css as a stylesheet in the head of your html and origen.js file in the body. Also [jQuery](https://jquery.com/) is needed before the origen.js file. 
 
 ```
 <link rel="stylesheet" style="text/css" href="origen.css" >
