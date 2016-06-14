@@ -1,0 +1,46 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+	<title>Testing Origen CSS</title>
+	<link rel="stylesheet" type="text/css" href="../../origen/dist/css/origen.css">
+</head>
+
+<style>
+
+
+
+</style>
+<body>
+
+<h1><strong>Components</strong></h1>
+
+<h2>Slider</h2>
+<div id="slider" class="slider">
+    <ul class="slides">
+        <li class="slide"><img src="images/slider001.jpg"></li>
+        <li class="slide"><img src="images/slider002.jpg"></li>
+        <li class="slide"><img src="images/slider003.jpg"></li>
+        <li class="slide"><img src="images/slider004.jpg"></li>
+        <li class="slide"><img src="images/slider001.jpg"></li>
+    </ul>
+</div>
+
+<script
+src="https://code.jquery.com/jquery-3.0.0.min.js"
+integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
+crossorigin="anonymous"></script>
+
+<script
+src="../dist/js/origen.js"></script>
+
+<script>
+
+
+$('#slider').slider({
+    width: 720,
+});
+
+</script>
+
+</body>
+</html>
