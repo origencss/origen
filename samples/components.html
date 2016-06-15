@@ -25,6 +25,11 @@
     </ul>
 </div>
 
+
+<h2>Dialog</h2>
+<a href="#" id="dialog-example">Click Here</a>
+
+
 <script
 src="https://code.jquery.com/jquery-3.0.0.min.js"
 integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="
@@ -34,12 +39,18 @@ crossorigin="anonymous"></script>
 src="../dist/js/origen.js"></script>
 
 <script>
-
-
 $('#slider').slider({
     width: 720,
 });
+</script>
 
+<script>
+$(document).ready(function(){
+    $('#dialog-example').dialog_box({
+        title:"Title of the dialog",
+        description: "Insert here the description or the block of html.",
+    });
+});
 </script>
 
 </body>
