@@ -90,7 +90,7 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
 
         	var total = $("body").height();
         	var per = (scr * 100 / total);
-            console.log("scr="+scr+" ; total = "+total+" ; per = "+per);
+            //console.log("scr="+scr+" ; total = "+total+" ; per = "+per);
             //per = 95;
 
         	settings.top = per+"%";
@@ -178,7 +178,39 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
              });
         }
 
-        return this;
+        // return this;
+    };
+
+
+    //tabs
+    $.fn.tabs = function( options ) {
+        this.each(function(){
+
+            var $active, $content, $links = $(this).find('a');
+
+            $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+            $active.addClass('active');
+
+            $content = $($active[0].hash);
+
+            $links.not($active).each(function () {
+              $(this.hash).hide();
+            });
+
+             $(this).on('click', 'a', function(e){
+
+              $active.removeClass('active');
+              $content.hide();
+
+              $active = $(this);
+              $content = $(this.hash);
+
+              $active.addClass('active');
+              $content.show();
+
+              e.preventDefault();
+            });
+      });
     };
 
 }( jQuery ));
