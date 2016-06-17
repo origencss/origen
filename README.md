@@ -17,7 +17,7 @@ Download latest release that contains CSS, JavaScript and Fonts files to use in 
 
 ```
 <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <!-- Main origen javascript file-->
 <script src="js/origen.js"></script> 
 ```
