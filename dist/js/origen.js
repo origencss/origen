@@ -64,7 +64,7 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
         var per = (scr * 100 / total);
 
         var settings = $.extend({
-            height : "250",
+            height : "auto",
             width : "500",
             title:"Title",
             description: "This is a description.",
@@ -74,32 +74,29 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
         },options);
                 
         return this.click(function(event){
-        	event.preventDefault();
-        	//var scr = $("body").scrollTop();
-             var scr;
-              if(window.pageYOffset!= undefined){
-                 scr =  pageYOffset+20;
-              }
-             
-             if (window.pageYOffset == undefined)  {
-                  var sx, sy, d= document, r= d.documentElement, b= d.body;
-                  sx= r.scrollLeft || b.scrollLeft || 0;
-                  sy= r.scrollTop || b.scrollTop || 0;
-                  scr = sy+20;
+	       event.preventDefault();
+
+            var scr;
+            if(window.pageYOffset!= undefined){
+             scr =  pageYOffset+20;
             }
 
-        	var total = $("body").height();
-        	var per = (scr * 100 / total);
-            //console.log("scr="+scr+" ; total = "+total+" ; per = "+per);
-            //per = 95;
+            if (window.pageYOffset == undefined)  {
+              var sx, sy, d= document, r= d.documentElement, b= d.body;
+              sx= r.scrollLeft || b.scrollLeft || 0;
+              sy= r.scrollTop || b.scrollTop || 0;
+              scr = sy+20;
+            }
 
-        	settings.top = per+"%";
+            var total = $("body").height();
+            var per = (scr * 100 / total);
+
+            settings.top = per+"%";
 
             add_block_page();
             add_popup_box();
             add_styles();
 
-            
             $('.dialog_modal_box').fadeIn();
    
         });
@@ -153,7 +150,7 @@ Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(as|async|
                 'background-color':'#fff',
                 'height':(settings.height - 10) + 'px',
                 'width':(settings.width - 10) + 'px',
-                'padding':'5px',
+                'padding':'10px',
                 'margin':'3px',
                 'border-radius':'1px',
                 '-moz-border-radius':'1px',

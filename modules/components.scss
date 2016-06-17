@@ -41,9 +41,10 @@
         border-radius: 4px 4px 0 0;
         border: 1px solid #ddd;
         border-bottom:none;
-        .active {
-            background: rgb(230, 230, 230);
-            color:#000;
+        &.active {
+                background: rgb(230, 230, 230);
+                color:#000;
         }
     }
+
 }
